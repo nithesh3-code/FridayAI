@@ -1,0 +1,87 @@
+{
+    "python": {
+        "language": "python",
+        "aliases": [],
+        "extension": ".py",
+        "runtime": "python",
+        "compiler": null,
+        "vscodeextensions": [
+            "ms-python.python"
+        ],
+        "executiontype": "runtime",
+        "runcommand": "python",
+        "compilecommand": null,
+        "confidence": 1.0,
+        "vscode_extensions": [],
+        "execution_type": "unknown",
+        "run_command": null,
+        "compile_command": null
+    },
+    "java": {
+        "language": "java",
+        "aliases": [
+            "java"
+        ],
+        "extension": ".java",
+        "runtime": "java",
+        "compiler": "javac",
+        "vscode_extensions": [
+            "redhat.java"
+        ],
+        "execution_type": "compiled",
+        "run_command": "java",
+        "compile_command": "javac",
+        "confidence": 1.0
+    },
+    "javascript": {
+        "language": "javascript",
+        "aliases": [
+            "javascript",
+            "node",
+            "nodejs",
+            "node.js",
+            "node js"
+        ],
+        "extension": ".js",
+        "runtime": "node",
+        "compiler": null,
+        "vscode_extensions": [],
+        "execution_type": "runtime",
+        "run_command": "node",
+        "compile_command": null,
+        "confidence": 1.0
+    },
+    "rust": {
+        "language": "rust",
+        "aliases": [
+            "rust"
+        ],
+        "extension": ".rs",
+        "runtime": null,
+        "compiler": "rustc",
+        "vscode_extensions": [
+            "rust-lang.rust-analyzer"
+        ],
+        "execution_type": "compiled",
+        "run_command": null,
+        "compile_command": "rustc",
+        "confidence": 1.0
+    },
+    "go": {
+        "language": "go",
+        "aliases": [
+            "go",
+            "golang"
+        ],
+        "extension": ".go",
+        "runtime": "go",
+        "compiler": null,
+        "vscode_extensions": [
+            "golang.go"
+        ],
+        "execution_type": "runtime",
+        "run_command": "go",
+        "compile_command": null,
+        "confidence": 1.0
+    }
+}
