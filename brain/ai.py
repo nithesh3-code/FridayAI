@@ -135,7 +135,7 @@ def ask_ai(prompt):
     messages.extend(history[-6:])
 
     response = client.chat.completions.create(
-        model="llama-3.3-70b-versatile",
+        model="openai/gpt-oss-20b",
         messages=messages
     )
 
@@ -188,7 +188,7 @@ USER QUESTION:
 """
 
     response = client.chat.completions.create(
-        model="llama-3.3-70b-versatile",
+        model="openai/gpt-oss-20b",
         messages=[
             {
                 "role": "system",
@@ -236,7 +236,7 @@ WEBPAGE:
 """
 
     response = client.chat.completions.create(
-        model="llama-3.3-70b-versatile",
+        model="openai/gpt-oss-20b",
         messages=[
             {
                 "role": "system",
@@ -252,3 +252,32 @@ WEBPAGE:
     reply = response.choices[0].message.content
 
     return clean_response(reply)
+
+def generate_ai_code(prompt):
+
+    response = client.chat.completions.create(
+        model="openai/gpt-oss-20b",
+        messages=[
+            {
+                "role": "system",
+                "content": (
+                    "You are a professional programming assistant. "
+                    "Return only complete source code as plain text. "
+                    "Do not use Markdown. "
+                    "Do not explain the code. "
+                    "Do not call tools or functions. "
+                    "Do not return tool calls. "
+                    "Output the code directly in the message content."
+                )
+            },
+            {
+                "role": "user",
+                "content": prompt
+            }
+        ],
+        tool_choice="none"
+    )
+
+    reply = response.choices[0].message.content
+
+    return reply.strip()

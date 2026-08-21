@@ -1,21 +1,15 @@
 {
     "python": {
         "language": "python",
-        "aliases": [],
+        "aliases": ["python", "py"],
         "extension": ".py",
         "runtime": "python",
         "compiler": null,
-        "vscodeextensions": [
-            "ms-python.python"
-        ],
-        "executiontype": "runtime",
-        "runcommand": "python",
-        "compilecommand": null,
-        "confidence": 1.0,
-        "vscode_extensions": [],
-        "execution_type": "unknown",
-        "run_command": null,
-        "compile_command": null
+        "vscode_extensions": ["ms-python.python"],
+        "execution_type": "runtime",
+        "run_command": "python",
+        "compile_command": null,
+        "confidence": 1.0
     },
     "java": {
         "language": "java",

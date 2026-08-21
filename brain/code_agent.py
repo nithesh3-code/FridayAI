@@ -1,7 +1,7 @@
 import os
 import re
 
-from brain.ai import ask_ai
+from brain.ai import generate_ai_code
 
 from automation.vscode_controller import (
     create_file,
@@ -67,7 +67,7 @@ Rules:
 
     try:
 
-        code = ask_ai(prompt)
+        code = generate_ai_code(prompt)
 
         return code.strip()
 
@@ -198,7 +198,7 @@ def check_environment(language):
 # BUILD PROJECT
 # =========================================================
 
-def build_python_project(
+def build_project(
     request,
     file_path=None
 ):

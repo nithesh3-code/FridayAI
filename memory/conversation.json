@@ -1,54 +1,6 @@
 [
   {
     "role": "user",
-    "content": "\nYou are ARCHON's automatic code repair engine.\n\nProgramming language:\npython\n\nSOURCE CODE:\nprint(hello)\n\nEXECUTION / COMPILATION ERROR:\nNameError: name hello is not defined\n\nYour task:\n\n1. Find the actual cause of the error.\n2. Correct the source code.\n3. Preserve the user's original intent.\n4. Do not unnecessarily rewrite working code.\n5. Return the COMPLETE corrected source code.\n\nSTRICT OUTPUT RULES:\n\n- Return ONLY source code.\n- Do NOT use Markdown.\n- Do NOT use ``` blocks.\n- Do NOT explain anything.\n- Do NOT include comments outside the source code.\n- The result must be directly runnable/compilable.\n"
-  },
-  {
-    "role": "assistant",
-    "content": "hello = \"Hello, World!\"\nprint(hello)"
-  },
-  {
-    "role": "user",
-    "content": "\nYou are ARCHON's automatic code repair engine.\n\nProgramming language:\npython\n\nSOURCE CODE:\nprint(hello)\n\nEXECUTION / COMPILATION ERROR:\nNameError: name hello is not defined\n\nYour task:\n\n1. Find the actual cause of the error.\n2. Correct the source code.\n3. Preserve the user's original intent.\n4. Do not unnecessarily rewrite working code.\n5. Return the COMPLETE corrected source code.\n\nSTRICT OUTPUT RULES:\n\n- Return ONLY source code.\n- Do NOT use Markdown.\n- Do NOT use ``` blocks.\n- Do NOT explain anything.\n- Do NOT include comments outside the source code.\n- The result must be directly runnable/compilable.\n"
-  },
-  {
-    "role": "assistant",
-    "content": "hello = \"hello\"\nprint(hello)"
-  },
-  {
-    "role": "user",
-    "content": "\nYou are ARCHON's programming-language discovery engine.\n\nIdentify the programming language from this user request:\n\ncreate a python program that prints hello from archon\n\nReturn ONLY valid JSON.\n\nDo not use Markdown.\nDo not use code fences.\nDo not explain anything.\n\nRequired JSON structure:\n\n{\n    \"language\": \"canonical language name\",\n    \"aliases\": [],\n    \"extension\": \".ext\",\n    \"runtime\": null,\n    \"compiler\": null,\n    \"vscode_extensions\": [],\n    \"execution_type\": \"runtime\",\n    \"run_command\": null,\n    \"compile_command\": null,\n    \"confidence\": 0.0\n}\n\nRules:\n\n1. extension must include the dot.\n2. runtime is the executable normally used to run the language,\n   or null if compilation is required.\n3. compiler is the compiler executable,\n   or null if not required.\n4. vscode_extensions must contain known VS Code Marketplace\n   extension IDs when one is known.\n5. execution_type must be one of:\n   \"runtime\"\n   \"compiled\"\n   \"browser\"\n   \"unknown\"\n6. run_command must be the executable name only,\n   for example:\n   \"python\"\n   \"node\"\n   \"ruby\"\n   \"php\"\n\n7. compile_command must be the compiler executable only,\n   for example:\n   \"javac\"\n   \"g++\"\n   \"rustc\"\n\n8. Never invent a runtime or compiler.\n9. If you are not confident, use null.\n10. confidence must be between 0 and 1.\n"
-  },
-  {
-    "role": "assistant",
-    "content": "{\n    \"language\": \"Python\",\n    \"aliases\": [\"py\"],\n    \"extension\": \".py\",\n    \"runtime\": \"python\",\n    \"compiler\": null,\n    \"vscodeextensions\": [\"ms-python.python\"],\n    \"executiontype\": \"runtime\",\n    \"runcommand\": \"python\",\n    \"compilecommand\": null,\n    \"confidence\": 1.0\n}"
-  },
-  {
-    "role": "user",
-    "content": "\nYou are ARCHON's professional coding agent.\n\nProgramming language:\npython\n\nUser request:\ncreate a Python program that prints Hello from ARCHON\n\nGenerate complete working source code.\n\nRules:\n- Return ONLY source code.\n- Do NOT use Markdown.\n- Do NOT use ``` blocks.\n- Do NOT explain the code.\n- Make the code valid for python.\n- Make the program directly runnable.\n- Use the correct syntax and standard conventions for python.\n"
-  },
-  {
-    "role": "assistant",
-    "content": "print(\"Hello from ARCHON\")"
-  },
-  {
-    "role": "user",
-    "content": "\nYou are ARCHON's programming-language discovery engine.\n\nIdentify the programming language from this user request:\n\ncreate a python program that prints hello from archon\n\nReturn ONLY valid JSON.\n\nDo not use Markdown.\nDo not use code fences.\nDo not explain anything.\n\nRequired JSON structure:\n\n{\n    \"language\": \"canonical language name\",\n    \"aliases\": [],\n    \"extension\": \".ext\",\n    \"runtime\": null,\n    \"compiler\": null,\n    \"vscode_extensions\": [],\n    \"execution_type\": \"runtime\",\n    \"run_command\": null,\n    \"compile_command\": null,\n    \"confidence\": 0.0\n}\n\nRules:\n\n1. extension must include the dot.\n2. runtime is the executable normally used to run the language,\n   or null if compilation is required.\n3. compiler is the compiler executable,\n   or null if not required.\n4. vscode_extensions must contain known VS Code Marketplace\n   extension IDs when one is known.\n5. execution_type must be one of:\n   \"runtime\"\n   \"compiled\"\n   \"browser\"\n   \"unknown\"\n6. run_command must be the executable name only,\n   for example:\n   \"python\"\n   \"node\"\n   \"ruby\"\n   \"php\"\n\n7. compile_command must be the compiler executable only,\n   for example:\n   \"javac\"\n   \"g++\"\n   \"rustc\"\n\n8. Never invent a runtime or compiler.\n9. If you are not confident, use null.\n10. confidence must be between 0 and 1.\n"
-  },
-  {
-    "role": "assistant",
-    "content": "{\n    \"language\": \"Python\",\n    \"aliases\": [\"py\"],\n    \"extension\": \".py\",\n    \"runtime\": \"python\",\n    \"compiler\": null,\n    \"vscodeextensions\": [\"ms-python.python\"],\n    \"executiontype\": \"runtime\",\n    \"runcommand\": \"python\",\n    \"compilecommand\": null,\n    \"confidence\": 1.0\n}"
-  },
-  {
-    "role": "user",
-    "content": "\nYou are ARCHON's professional coding agent.\n\nProgramming language:\npython\n\nUser request:\ncreate a Python program that prints Hello from ARCHON\n\nGenerate complete working source code.\n\nRules:\n- Return ONLY source code.\n- Do NOT use Markdown.\n- Do NOT use ``` blocks.\n- Do NOT explain the code.\n- Make the code valid for python.\n- Make the program directly runnable.\n- Use the correct syntax and standard conventions for python.\n"
-  },
-  {
-    "role": "assistant",
-    "content": "print(\"Hello from ARCHON\")"
-  },
-  {
-    "role": "user",
     "content": "\nYou are ARCHON's programming-language discovery engine.\n\nIdentify the programming language from this user request:\n\ncreate a python program that prints hello from archon\n\nReturn ONLY valid JSON.\n\nDo not use Markdown.\nDo not use code fences.\nDo not explain anything.\n\nRequired JSON structure:\n\n{\n    \"language\": \"canonical language name\",\n    \"aliases\": [],\n    \"extension\": \".ext\",\n    \"runtime\": null,\n    \"compiler\": null,\n    \"vscode_extensions\": [],\n    \"execution_type\": \"runtime\",\n    \"run_command\": null,\n    \"compile_command\": null,\n    \"confidence\": 0.0\n}\n\nRules:\n\n1. extension must include the dot.\n2. runtime is the executable normally used to run the language,\n   or null if compilation is required.\n3. compiler is the compiler executable,\n   or null if not required.\n4. vscode_extensions must contain known VS Code Marketplace\n   extension IDs when one is known.\n5. execution_type must be one of:\n   \"runtime\"\n   \"compiled\"\n   \"browser\"\n   \"unknown\"\n6. run_command must be the executable name only,\n   for example:\n   \"python\"\n   \"node\"\n   \"ruby\"\n   \"php\"\n\n7. compile_command must be the compiler executable only,\n   for example:\n   \"javac\"\n   \"g++\"\n   \"rustc\"\n\n8. Never invent a runtime or compiler.\n9. If you are not confident, use null.\n10. confidence must be between 0 and 1.\n"
   },
   {
@@ -70,6 +22,54 @@
   {
     "role": "assistant",
     "content": "main.py\ndef main():\n    print(\"Hello from ARCHON\")\n\nif name == \"main\":\n    main()"
+  },
+  {
+    "role": "user",
+    "content": "\nYou are ARCHON's professional coding agent.\n\nProgramming language:\npython\n\nUser request:\ncreate a Python program that prints Hello from ARCHON\n\nGenerate complete working source code.\n\nRules:\n- Return ONLY source code.\n- Do NOT use Markdown.\n- Do NOT use ``` blocks.\n- Do NOT explain the code.\n- Make the code valid for python.\n- Make the program directly runnable.\n- Use the correct syntax and standard conventions for python.\n"
+  },
+  {
+    "role": "assistant",
+    "content": "def main():\n    print(\"Hello from ARCHON\")\n\nif name == \"main\":\n    main()"
+  },
+  {
+    "role": "user",
+    "content": "\nYou are ARCHON's professional coding agent.\n\nProgramming language:\npython\n\nUser request:\ncreate a Python program that prints Hello from ARCHON\n\nGenerate complete working source code.\n\nRules:\n- Return ONLY source code.\n- Do NOT use Markdown.\n- Do NOT use ``` blocks.\n- Do NOT explain the code.\n- Make the code valid for python.\n- Make the program directly runnable.\n- Use the correct syntax and standard conventions for python.\n"
+  },
+  {
+    "role": "user",
+    "content": "\nYou are ARCHON's professional coding agent.\n\nProgramming language:\npython\n\nUser request:\ncreate a Python program that prints Hello from ARCHON\n\nGenerate complete working source code.\n\nRules:\n- Return ONLY source code.\n- Do NOT use Markdown.\n- Do NOT use ``` blocks.\n- Do NOT explain the code.\n- Make the code valid for python.\n- Make the program directly runnable.\n- Use the correct syntax and standard conventions for python.\n"
+  },
+  {
+    "role": "user",
+    "content": "What is Python?"
+  },
+  {
+    "role": "assistant",
+    "content": "Python is a high-level, interpreted programming language known for its readability and versatility in tasks such as web development, data analysis, and scripting."
+  },
+  {
+    "role": "user",
+    "content": "\nYou are ARCHON's professional coding agent.\n\nProgramming language:\npython\n\nUser request:\ncreate a Python program that prints Hello from ARCHON\n\nGenerate complete working source code.\n\nRules:\n- Return ONLY source code.\n- Do NOT use Markdown.\n- Do NOT use ``` blocks.\n- Do NOT explain the code.\n- Make the code valid for python.\n- Make the program directly runnable.\n- Use the correct syntax and standard conventions for python.\n"
+  },
+  {
+    "role": "assistant",
+    "content": "def main():\n    print(\"Hello from ARCHON\")\n\nif name == \"main\":\n    main()"
+  },
+  {
+    "role": "user",
+    "content": "\nYou are ARCHON's automatic code repair engine.\n\nProgramming language:\npython\n\nSOURCE CODE:\ndef main():\n    print(\"Hello from ARCHON\")\n\nif name == \"main\":\n    main()\n\nEXECUTION / COMPILATION ERROR:\nEXECUTION FAILED\nTraceback (most recent call last):\n  File \"E:\\FridayAI\\tests\\archon_generated.py\", line 4, in <module>\n    if name == \"main\":\n       ^^^^\nNameError: name 'name' is not defined\n\nYour task:\n\n1. Find the actual cause of the error.\n2. Correct the source code.\n3. Preserve the user's original intent.\n4. Do not unnecessarily rewrite working code.\n5. Return the COMPLETE corrected source code.\n\nSTRICT OUTPUT RULES:\n\n- Return ONLY source code.\n- Do NOT use Markdown.\n- Do NOT use ``` blocks.\n- Do NOT explain anything.\n- Do NOT include comments outside the source code.\n- The result must be directly runnable/compilable.\n"
+  },
+  {
+    "role": "assistant",
+    "content": "def main():\n    print(\"Hello from ARCHON\")\n\nif name == \"main\":\n    main()"
+  },
+  {
+    "role": "user",
+    "content": "\nYou are ARCHON's professional coding agent.\n\nProgramming language:\npython\n\nUser request:\ncreate a Python program that prints Hello from ARCHON\n\nGenerate complete working source code.\n\nRules:\n- Return ONLY source code.\n- Do NOT use Markdown.\n- Do NOT use ``` blocks.\n- Do NOT explain the code.\n- Make the code valid for python.\n- Make the program directly runnable.\n- Use the correct syntax and standard conventions for python.\n"
+  },
+  {
+    "role": "assistant",
+    "content": "def main():\n    print(\"Hello from ARCHON\")\n\nif name == \"main\":\n    main()"
   },
   {
     "role": "user",
